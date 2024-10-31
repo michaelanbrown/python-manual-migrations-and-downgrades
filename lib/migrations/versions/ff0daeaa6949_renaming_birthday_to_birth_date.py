@@ -17,8 +17,8 @@ depends_on = None
 
 
 def upgrade() -> None:
-    pass
+    op.rename_column('birthday', 'birth_date')
 
 
 def downgrade() -> None:
-    pass
+    op.rename_column('birth_date', 'birthday')
